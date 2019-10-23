@@ -54,6 +54,180 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: 'Liu Jian Mao Cao', cursive;
 }
+
+p, ul, li, th{
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+
+// VARIABLE 
+@font-color: rgb(219, 167, 24);
+
+//MIXIN
+
+.display {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+
+.borders{
+	border: 2px dashed black;
+}
+
+//CODE w/ LESS & NESTING
+
+body{
+	background-color: rgb(240, 203, 38);
+	
+}
+
+.container{
+	margin: 0 20%;
+	border: solid black;
+	background-color: white;
+}
+
+header{
+
+	nav{
+		margin: 2%;
+		.display();
+
+		a{
+			color: @font-color;
+			font-size: 20px;
+			text-decoration: none;
+			border: 1px dashed black;
+			padding: 1%;
+	
+		}
+
+		@media(max-width: 500px){
+			flex-direction: column;
+			width:100%;
+			text-align: center;
+		}
+
+	}
+
+	@media(max-width: 500px){
+		margin-right: 5%;
+	}
+
+}
+
+.intro{
+	.borders();
+	
+	h1{
+		font-size: 40px;
+		text-align: center;
+		margin: 2%;
+
+		.bee{
+			width: 25%;
+			height: auto;
+		}
+	
+
+	}
+
+	h2{
+		font-size: 20px;
+		text-align: center;
+		margin: 2%;
+		font-weight: bold;
+		padding: 1%;
+
+	}
+
+	p{
+		text-align: center;
+		margin-bottom: 1%;
+	}
+
+	@media(max-width:500px){
+		padding: 4%;
+	}
+}
+
+.skills-work{
+	.display();
+
+	@media(max-width: 500px){
+		width: 100%;
+		flex-direction: column;
+	}
+}
+
+.skills{
+	margin: 1%;
+
+	ul{
+		list-style-type:disc;
+		margin-left: 30px;
+	}
+
+	h2{
+		font-size:30px;
+		margin-bottom: 10px;
+		
+	}
+
+}
+
+.work{
+	margin: 1%;
+	
+	h2{
+		font-size:30px;
+		margin-bottom: 10px;
+	}
+
+	table{
+		width:100%;
+
+		th{
+			.borders();
+			padding: 1%;
+		}
+
+		.title{
+			font-weight: bold;
+			font-size: 20px;
+		}
+
+		ul{
+			list-style-type:disc;
+			margin-left: 30px;
+		}
+
+	}
+		
+		
+}
+
+.contact{
+	padding: 2%;
+	padding-bottom: 4%;
+	border-bottom: 1px dashed black;
+	
+	h2{
+		font-size:30px;
+		padding: 2%;
+	}
+}
+
+footer{
+	width: 100%;
+	text-align: center;
+	margin-top: 13%;
+	margin-bottom: 13%;
+}
+
 
